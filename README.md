@@ -8,15 +8,15 @@ Project 3: Build a reporting tool that will use information ffrom the database t
 
 1. Download and install [Vagrant](https://www.vagrantup.com/downloads.html) and [Virtual Box](https://www.virtualbox.org/wiki/Downloads) for your operating system.
 
-2. Use Github to clone this [repository](https://github.com/udacity/fullstack-nanodegree-vm).
+2. Use Github to clone the repository [https://github.com/udacity/fullstack-nanodegree-vm](https://github.com/udacity/fullstack-nanodegree-vm).
 
 3. Using your terminal, cd into the vagrant directory, run ```vagrant up```, then log into it with ```vagrant ssh```.
 
 4. Clone the GitHub repository inside the vagrant folder. 
 
-5. Download and unzip the data file [newsdata.sql](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip") and put this file into the vagrant directory. Using the terminal, cd into the vagrant directory and use the command ```psql -d news -f newsdata.sql``` to create the tables and populating them with data.
+5. Download and unzip the data file [newsdata.sql](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip) and put this file into the vagrant directory. Using the terminal, cd into the vagrant directory and use the command ```psql -d news -f newsdata.sql``` to create the tables and populate them with data.
 
-6. Create the database views log_view and failed_requests_view (create statements below). 
+6. Create the database views log_view and failed_requests_view user the CREATE VIEW statements in the Database Views section below. 
 
 7. Run the python3 file logs_analysis.py.
 

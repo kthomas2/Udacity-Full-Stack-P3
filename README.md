@@ -16,7 +16,7 @@ Project 3: Build a reporting tool that will use information ffrom the database t
 
 5. Download and unzip the data file [newsdata.sql](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip) and put this file into the vagrant directory. Using the terminal, cd into the vagrant directory and use the command ```psql -d news -f newsdata.sql``` to create the tables and populate them with data.
 
-6. Create the database views log_view and failed_requests_view user the CREATE VIEW statements in the Database Views section below. 
+6. Create the database views log_view and failed_requests_view using the CREATE VIEW statements in the Database Views section below. 
 
 7. Run the python3 file logs_analysis.py.
 

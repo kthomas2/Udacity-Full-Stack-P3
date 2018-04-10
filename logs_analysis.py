@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Database code for the Logs Analysis project
+"""Database code for the Logs Analysis project."""
 
 import psycopg2
 
@@ -24,6 +24,7 @@ def generate_report(sql_stmt, title, detail):
     for row in data:
         print(" {} -- {}{}".format(row[0], row[1], detail))
     print("\n")
+
 
 # Most popular three articles of all time
 sql_stmt = "select a.title, count(*)\

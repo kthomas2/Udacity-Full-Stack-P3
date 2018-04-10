@@ -27,30 +27,30 @@ def generate_report(sql_stmt, title, detail):
 
 
 # Most popular three articles of all time
-sql_stmt = "select a.title, count(*)\
-            from log l, articles a\
-            where l.path like '%'||a.slug\
-            group by a.title\
-            order by 2 desc limit 3;"
+sql_stmt = "SELECT a.title, count(*)\
+            FROM log l, articles a\
+            WHERE l.path LIKE '%'||a.slug\
+            GROUP BY a.title\
+            ORDER BY 2 DESC LIMIT 3;"
 title = "Most popular three articles of all time"
 detail = " views"
 generate_report(sql_stmt, title, detail)
 
 # Most popular article authors of all time
-sql_stmt = "select w.name, count(*)\
-            from log l, articles a, authors w\
-            where l.path like '%'||a.slug and a.author = w.id\
-            group by w.name\
-            order by 2 desc;"
+sql_stmt = "SELECT w.name, count(*)\
+            FROM log l, articles a, authors w\
+            WHERE l.path LIKE '%'||a.slug AND a.author = w.id\
+            GROUP BY w.name\
+            ORDER BY 2 DESC;"
 title = "Most popular article authors of all time"
 detail = " views"
 generate_report(sql_stmt, title, detail)
 
 # Days with more than 1% of requests lead to errors
-sql_stmt = "select f.log_date, f.failed_pct\
-            from failed_requests_view f\
-            where f.failed_pct > 1\
-            order by f.log_date desc;"
+sql_stmt = "SELECT f.log_date, f.failed_pct\
+            FROM failed_requests_view f\
+            WHERE f.failed_pct > 1\
+            ORDER BY f.log_date DESC;"
 title = "Days with more than 1 % of requests lead to errors"
 detail = "% errors"
 generate_report(sql_stmt, title, detail)
